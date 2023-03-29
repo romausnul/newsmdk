@@ -1,0 +1,85 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 10/02/2020 05:05
+  	*/
+    @keyframes fade {
+      0%   { opacity: 0; }
+      11.11%   { opacity: 1; }
+      33.33%  { opacity: 1; }
+      44.44%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    
+    .fadein { position:relative; width:30%;}
+    .fadein img { position:absolute; width:50%; left:0; right:0; opacity:0; animation-name: fade; animation-duration: 9s; animation-iteration-count: infinite; }
+    .fadein img:nth-child(1) { animation-delay: 0s;  }
+    .fadein img:nth-child(2) { animation-delay: 3s;  }
+    .fadein img:nth-child(3) { animation-delay: 6s;  }
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Flaticon.woff2") format("woff2"),
+       url("../fonts/Flaticon.woff") format("woff"),
+       url("../fonts/Flaticon.ttf") format("truetype"),
+       url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+}
+
+.flaticon-arrow:before { content: "\f100"; }
+.photo-container-2 {
+  max-width: 380px;
+  width: 100%;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+}
+.photo-container-2 img {
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+}
+.photo-container-2 .photo-1 {
+  position: relative;
+  animation: rotate 10s linear 5s infinite;
+}
+.photo-container-2 .photo-2 {
+  position: absolute;
+  top: 0;
+  animation: rotate 10s linear infinite;
+}
+@keyframes rotate {
+  0% {
+      opacity: 1;
+      transform: rotate(0) scale(1);
+  }
+  50% {
+      transform: rotate(0) scale(1);
+      opacity: 1;
+  } 
+  59.99999% {
+      transform: rotate(45deg) scale(3);
+      opacity: 0;
+      z-index: 1;
+  }   
+  60% {
+      opacity: 0;
+      z-index: -1;
+  }  
+  100% {
+      opacity: 1;
+  }  
+}
